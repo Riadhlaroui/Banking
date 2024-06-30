@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Atlas",
-  description: "Atlas is a banking app for everyone.",
+  description: "Atlas is a moderin banking platform for everyone.",
   icons: {
     icon: '/icons/logo.svg'
   }
