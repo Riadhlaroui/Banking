@@ -24,7 +24,7 @@ const config = {
           1: "rgba(255, 255, 255, 0.10)",
         },
         bankGradient: "#0179FE",
-        Navbar: "#dddfe4",
+        Navbar: "#f5f5f5",
         indigo: {
           500: "#6172F3",
           700: "#3538CD",
@@ -72,7 +72,7 @@ const config = {
       },
       backgroundImage: {
         "bank-gradient": "linear-gradient(90deg, #113b69 0%, #0069FF 100%)",
-        "gradient-mesh": "url('/icons/gradient-mesh.svg')",
+        "gradient-mesh": "url('/icons/background-graident.jpg')",
         "bank-green-gradient":
           "linear-gradient(90deg, #01797A 0%, #489399 100%)",
       },

@@ -9,8 +9,14 @@
   /*background-color: #d8dbe0;*/
 }
 
-body{
-  background-color: #CED2D3;
+body .sidebar{
+  /*background-color: #CED2D3;*/
+  /*background-color: #f4f4f6;*/
+  background-color: #f5f5f5;
+}
+
+body {
+  background-color: #f5f5f5;
 
 }
 
@@ -376,7 +382,6 @@ body{
   /* Sidebar */
   .sidebar {
     @apply sticky left-0 top-0 flex h-screen w-fit flex-col  justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px];
-    background-color: #CED2D3;
   }
 
   .sidebar-logo {

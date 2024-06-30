@@ -19,14 +19,12 @@ const Sidebar = ({user }: SiderbarProps) => {
                     alt="Atlas Logo"
                     className='size-[24px] max-xl:size-14'
                 />
-                <h1 className='sidebar-logo'>
-                Atlas
-                </h1>
+                <h1 className='sidebar-logo'>Atlas</h1>
             </Link>
             {sidebarLinks.map((item) => {
                     const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
                     return (
-                        <Link href={item.route} key={item.label} className={cn('sidebar-link bg-transparent', {'bg-bank-gradient':isActive})}>
+                        <Link href={item.route} key={item.label} className={cn('sidebar-link mr-2', {'bg-bank-gradient':isActive})}>
                             <div className='relative size-6'>
                                 <Image 
                                     src={item.imgURL}
