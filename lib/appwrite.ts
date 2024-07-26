@@ -32,7 +32,7 @@ export async function createAdminClient() {
       return new Account(client);
     },
 
-    get databases() {
+    get database() {
         return new Databases(client);
     },
 

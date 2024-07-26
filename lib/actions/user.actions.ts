@@ -6,9 +6,14 @@ import { useEffect } from "react";
 import { cookies } from "next/headers";
 import { parseStringify } from "../utils";
 
-export const signIn = async () => {
+export const signIn = async ({email, password}: signInProps) => {
     try {
-        
+      const { account } = await createAdminClient();
+
+      const response = await account.createEmailPasswordSession(email, password);
+
+      console.log('Server-Side Response:', response);
+      return parseStringify(response);
     } catch (error) {
         console.error('Error', error);
     }
@@ -41,7 +46,6 @@ export const signUp = async (userData: SignUpParams) => {
     }
 }
 
-// ... your initilization functions
 
 export async function getLoggedInUser() {
     try {
@@ -52,5 +56,18 @@ export async function getLoggedInUser() {
     } catch (error) {
       return null;
     }
+}
+
+export const logoutAcoount = async () => {
+  try {
+    const {account} = await createSessionClient();
+
+    cookies().delete('appwrite-session');
+
+    await account.deleteSession('current');
+    
+  } catch (error) {
+    return null
   }
+}
   

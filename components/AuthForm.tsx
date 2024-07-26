@@ -18,10 +18,8 @@ import { Input } from "@/components/ui/input";
 import { Divide, Loader, Loader2 } from "lucide-react";
 import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
-import SignUp from "@/app/(auth)/sign-up/page";
 import { useRouter } from "next/navigation";
-import { signUp } from "@/lib/actions/user.actions";
-import SignIn from "@/app/(auth)/sign-in/page";
+import { signIn, signUp } from "@/lib/actions/user.actions";
 
 
 const AuthForm = ({ type }: { type: string }) => {
@@ -51,12 +49,14 @@ const AuthForm = ({ type }: { type: string }) => {
       }
 
       if(type === 'sign-in') {
-        // const response = await SignIn({
-        //   email: data.email,
-        //   password: data.password,
-        // });
+        const response = await signIn({
+          email: data.email,
+          password: data.password,
+        });
 
-        // if(response) router.push('/')
+        console.log('Sign-In Response:', response);
+
+        if(response) router.push('/')
       }
     } catch (error) {
       console.log(error);
@@ -94,7 +94,7 @@ const AuthForm = ({ type }: { type: string }) => {
         <>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              {type === 'sign-up' &&(
+              {type === 'sign-up' && (
                 <>
                   <div className="flex gap-4">
                     <CustomInput 
