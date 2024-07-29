@@ -8,18 +8,16 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Divide, Loader, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { signIn, signUp } from "@/lib/actions/user.actions";
+import PlaidLink from "./PlaidLink";
 
 
 const AuthForm = ({ type }: { type: string }) => {
@@ -43,7 +41,20 @@ const AuthForm = ({ type }: { type: string }) => {
     try {
       //sign up with app-write
       if(type === 'sign-up') {
-        const newUser = await signUp(data);
+        const userData = {
+          firstName: data.firstName!,
+          lastName: data.lastName!,
+          address1: data.address1!,
+          city: data.city!,
+          state: data.state!,
+          postalCode: data.postalCode!,
+          dateOfBirth: data.dateOfBirth!,
+          ssn: data.ssn!,
+          email: data.email,
+          password: data.password
+        }
+
+        const newUser = await signUp(userData);
 
         setUser(newUser);
       }
@@ -89,8 +100,10 @@ const AuthForm = ({ type }: { type: string }) => {
         </div>
       </header>
       {user ? (
-        <div className="flex flex-col gap-4">{/*Plaid Link*/}</div>
-      ) : (
+        <div className="flex flex-col gap-4">
+          <PlaidLink user={user} variant="primary"/>
+        </div>
+       ) : ( 
         <>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -140,7 +153,7 @@ const AuthForm = ({ type }: { type: string }) => {
                   <div className="flex gap-4">
                     <CustomInput 
                       control={form.control}
-                      name="dateOfBrith"
+                      name="dateOfBirth"
                       label="Date of Birth"
                       placeholder="Ex: YYYY-MM-DD"
                     />
