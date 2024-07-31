@@ -20,7 +20,7 @@ const Copy = ({ title }: { title: string }) => {
   return (
     <Button
       data-state="closed"
-      className="mt-3 flex max-w-[320px] gap-4"
+      className="mt-3 flex max-w-[320px] gap-4 bg-black-2"
       variant="secondary"
       onClick={copyToClipboard}
     >
@@ -35,7 +35,7 @@ const Copy = ({ title }: { title: string }) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="black"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -51,7 +51,7 @@ const Copy = ({ title }: { title: string }) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="black"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
