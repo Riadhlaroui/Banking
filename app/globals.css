@@ -52,22 +52,6 @@ body, .sidebar {
   background-color: #f5f5f5;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* Alert Dialog Overlay */
-.AlertDialogOverlay {
-  background-color: var(--black-a9);
-  position: fixed;
-  inset: 0;
-  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Remove Focus Outline for Alert Dialog Content */
-.AlertDialogContent:focus {
-  outline: none;
-}
 
 /* Keyframes for Overlay Show */
 @keyframes overlayShow {
@@ -196,7 +180,7 @@ body::-webkit-scrollbar {
 
   /* Right sidebar */
   .right-sidebar {
-    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[350px] xl:overflow-y-scroll !important;
+    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[360px] xl:overflow-y-scroll !important;
   }
 
   .profile-banner {
