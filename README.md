@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Live Demo:
 https://atlas-banking.vercel.app/
 
-Sign Up
+## Sign Up:
 to sign up the use this values:
 Postal Code: 12345
 Ssn: 1234
