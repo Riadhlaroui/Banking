@@ -35,12 +35,12 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
     <Table>
       <TableHeader className="bg-[#f9fafb]">
         <TableRow>
-          <TableHead className="px-2">Transaction</TableHead>
-          <TableHead className="px-2">Amount</TableHead>
-          <TableHead className="px-2">Status</TableHead>
-          <TableHead className="px-2">Date</TableHead>
-          <TableHead className="px-2 max-md:hidden">Channel</TableHead>
-          <TableHead className="px-2 max-md:hidden">Category</TableHead>
+          <TableHead className="px-2 text-black-1">Transaction</TableHead>
+          <TableHead className="px-2 text-black-1">Amount</TableHead>
+          <TableHead className="px-2 text-black-1">Status</TableHead>
+          <TableHead className="px-2 text-black-1">Date</TableHead>
+          <TableHead className="px-2 max-md:hidden text-black-1">Channel</TableHead>
+          <TableHead className="px-2 max-md:hidden text-black-1">Category</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -60,7 +60,7 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
             >
               <TableCell className="max-w-[250px] pl-2 pr-10">
                 <div className="flex items-center gap-3">
-                  <h1 className="text-14 truncate font-semibold text-[#344054]">
+                  <h1 className="text-14 truncate font-semibold text-[#0f131a]">
                     {removeSpecialCharacters(t.name)}
                   </h1>
                 </div>
