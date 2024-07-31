@@ -35,12 +35,12 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
     <Table>
       <TableHeader className="bg-[#f9fafb]">
         <TableRow>
-          <TableHead className="px-2 text-black-1">Transaction</TableHead>
-          <TableHead className="px-2 text-black-1">Amount</TableHead>
-          <TableHead className="px-2 text-black-1">Status</TableHead>
-          <TableHead className="px-2 text-black-1">Date</TableHead>
-          <TableHead className="px-2 max-md:hidden text-black-1">Channel</TableHead>
-          <TableHead className="px-2 max-md:hidden text-black-1">Category</TableHead>
+          <TableHead className="px-2 text-[#0f131a]">Transaction</TableHead>
+          <TableHead className="px-2 text-[#0f131a]">Amount</TableHead>
+          <TableHead className="px-2 text-[#0f131a]">Status</TableHead>
+          <TableHead className="px-2 text-[#0f131a]">Date</TableHead>
+          <TableHead className="px-2 max-md:hidden text-[#0f131a]">Channel</TableHead>
+          <TableHead className="px-2 max-md:hidden text-[#0f131a]">Category</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -80,11 +80,11 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                 <CategoryBadge category={status} />
               </TableCell>
 
-              <TableCell className="min-w-32 pl-2 pr-10">
+              <TableCell className="min-w-32 pl-2 pr-10 text-[#0f131a]">
                 {formatDateTime(new Date(t.date)).dateTime}
               </TableCell>
 
-              <TableCell className="pl-2 pr-10 capitalize min-w-24">
+              <TableCell className="pl-2 pr-10 capitalize min-w-24 text-[#0f131a]">
                 {t.paymentChannel}
               </TableCell>
 
