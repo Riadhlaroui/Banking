@@ -5,6 +5,7 @@ https://atlas-banking.vercel.app/
 
 ## Sign Up:
 to sign up the use this values:
+
 Postal Code: 12345
 Ssn: 1234
 City: NY
