@@ -63,10 +63,10 @@ const Footer = ({ user, type = "desktop" }: FooterProps) => {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>
-              <Button className="border-[#25232C] border-2 hover:bg-red-500 hover:text-white">Cancel</Button>
+              <Button className="border-[#25232C] hover:bg-red-500 hover:text-white">Cancel</Button>
             </AlertDialogCancel>
             <AlertDialogAction onClick={handleLogOut}>
-              <Button className="border-[#25232C] border-2 hover:bg-green-400 hover:text-white">Continue</Button>
+              <Button className="border-[#25232C] hover:bg-green-400 hover:text-white">Continue</Button>
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
