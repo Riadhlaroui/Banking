@@ -6,42 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*background-color: #d8dbe0;*/
-}
-
-body .sidebar{
-  /*background-color: #CED2D3;*/
-  /*background-color: #f4f4f6;*/
-  background-color: #f5f5f5;
-}
-
-body {
-  background-color: #f5f5f5;
-
-}
-
-.AlertDialogOverlay {
-  background-color: var(--black-a9);
-  position: fixed;
-  inset: 0;
-  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.AlertDialogContent:focus {
-  outline: none;
-}
-
-@keyframes overlayShow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.imgLogo {
-  mix-blend-mode: multiply;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -51,15 +15,12 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.glassmorphism {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+/* Custom Scrollbar Styles */
 .custom-scrollbar::-webkit-scrollbar {
   width: 3px;
   height: 3px;
@@ -77,6 +38,50 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #7878a3;
+}
+
+/* Glassmorphism */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Body and Sidebar Background */
+body, .sidebar {
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Alert Dialog Overlay */
+.AlertDialogOverlay {
+  background-color: var(--black-a9);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Remove Focus Outline for Alert Dialog Content */
+.AlertDialogContent:focus {
+  outline: none;
+}
+
+/* Keyframes for Overlay Show */
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Image Logo */
+.imgLogo {
+  mix-blend-mode: multiply;
 }
 
 @layer utilities {
@@ -191,7 +196,7 @@ body {
 
   /* Right sidebar */
   .right-sidebar {
-    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll !important;
+    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[322px] xl:overflow-y-scroll !important;
   }
 
   .profile-banner {
