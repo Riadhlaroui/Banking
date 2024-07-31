@@ -70,8 +70,8 @@ export const BankDropdown = ({
               className="cursor-pointer border-t"
             >
               <div className="flex flex-col ">
-                <p className="text-16 font-medium">{account.name}</p>
-                <p className="text-14 font-medium text-blue-600">
+                <p className="text-16 font-medium text-black-1">{account.name}</p>
+                <p className="text-14 font-medium text-blue-500">
                   {formatAmount(account.currentBalance)}
                 </p>
               </div>
