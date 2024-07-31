@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 https://atlas-banking.vercel.app/
 
 ## Sign Up:
-to sign up the use this values:
+Make suer to use this values when signing up:
 
 -Postal Code: 12345
 
