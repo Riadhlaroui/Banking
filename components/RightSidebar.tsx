@@ -59,7 +59,6 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
             )}
           </div>
         )}
-        {/* <ModeToggle /> */}
       </section>
     </aside>
   );
