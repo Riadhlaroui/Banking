@@ -5,12 +5,7 @@ import {Control, FieldPath} from 'react-hook-form'
 
 import { z } from 'zod';
 import { authFormSchema } from '@/lib/utils';
-import { Icon } from 'next/dist/lib/metadata/types/metadata-types';
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-
 const formSchema = authFormSchema('sign-up');
-
-
 
 interface CustomInput {
     control: Control<z.infer<typeof formSchema>>,

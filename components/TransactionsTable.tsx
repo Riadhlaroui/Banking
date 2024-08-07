@@ -31,6 +31,10 @@ const CategoryBadge = ({ category }: CategoryBadgeProps) => {
 };
 
 const TransactionsTable = ({ transactions }: TransactionTableProps) => {
+  if (!transactions || transactions.length === 0) {
+    return <p>No recent transactions.</p>;
+  }
+
   return (
     <Table>
       <TableHeader className="bg-[#f9fafb]">

@@ -6,7 +6,7 @@ import { ModeToggle } from "./ModeToggle";
 
 const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
   return (
-    <aside className="right-sidebar">
+    <aside className="right-sidebar min-w-80 shadow-lg">
       <section className="flex flex-col pd-8">
         <div className="profile-banner" />
         <div className="profile">

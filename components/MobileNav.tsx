@@ -1,5 +1,8 @@
 "use client";
+
 import React from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import {
   Sheet,
@@ -30,11 +33,18 @@ import {
 import { Button } from "./ui/button";
 import { logoutAccount } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
-
+import Particles from "./magicui/particles";
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
   const router = useRouter();
+
+  const { theme } = useTheme();
+  const [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    setColor(theme === "dark" ? "#ffffff" : "#000000");
+  }, [theme]);
 
   const handleLogOut = async () => {
     const loggedOut = await logoutAccount();
@@ -42,9 +52,8 @@ const MobileNav = ({ user }: MobileNavProps) => {
     if (loggedOut) router.push("/sign-in");
   };
 
-
   return (
-    <section className="w-full max-w=[264px]">
+    <section className="w-full">
       <Sheet>
         <SheetTrigger>
           <Image
@@ -70,7 +79,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
               Atlas
             </h1>
           </Link>
-          <div className="mobilenav-sheet">
+          <div className="mobilenav-sheet fixed">
             <SheetClose asChild>
               <nav className="flex h-full flex-col gap-6 pt-16 text-white">
                 {sidebarLinks.map((item) => {
