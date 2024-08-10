@@ -291,7 +291,7 @@ body, .sidebar {
   }
 
   .plaidlink-default {
-    @apply flex !justify-start cursor-pointer gap-3 rounded-lg !bg-transparent flex-row;
+    @apply flex !justify-start cursor-pointer gap-3 rounded-lg !bg-transparent flex-row ml-[-3px];
   }
 
   /* Auth */

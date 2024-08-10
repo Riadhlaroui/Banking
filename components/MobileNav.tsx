@@ -34,6 +34,7 @@ import { Button } from "./ui/button";
 import { logoutAccount } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 import Particles from "./magicui/particles";
+import PlaidLink from "./PlaidLink";
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -115,7 +116,10 @@ const MobileNav = ({ user }: MobileNavProps) => {
                     </SheetClose>
                   );
                 })}
-                user
+                <div className="flex flex-row">
+                  <PlaidLink user={user} />
+                  <p className="text-[16px] font-semibold text-black-2 mt-2">Connect Bank</p>
+                </div>
               </nav>
             </SheetClose>
             <Footer user={user} type="mobile" />
