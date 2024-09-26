@@ -24,7 +24,7 @@ https://atlas-banking.vercel.app/
 and many more, including code architecture and reusability. 
 
 ## Sign In:
-Email:  ``` coolemail@gmail.com ```
+Email:  ``` email@gmail.com ```
 Password: ``` 12345678 ```
 
 ## Sign Up:
