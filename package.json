@@ -23,7 +23,7 @@
     "clsx": "^2.1.1",
     "dwolla-v2": "^3.4.0",
     "lucide-react": "^0.396.0",
-    "next": "14.2.4",
+    "next": "^14.2.32",
     "next-themes": "^0.3.0",
     "node-appwrite": "^13.0.0",
     "plaid": "^26.0.0",
